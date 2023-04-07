@@ -16,14 +16,17 @@ import { Link } from "react-router-dom";
 
 const Professionals = ({ users, dispatch, favs }) => {
   return (
-    <div>
+    <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
       {users.map((user) => {
         return (
-          <Card sx={{ maxWidth: 345 }} key={user.id}>
+          <Card
+            sx={{ maxWidth: 345, backgroundColor: "#BDCDD6" }}
+            key={user.id}
+          >
             <CardHeader
               avatar={
                 <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
-                  R
+                  Pr
                 </Avatar>
               }
               title={user.name}
@@ -37,10 +40,11 @@ const Professionals = ({ users, dispatch, favs }) => {
               alt="Paella dish"
             />
             <CardContent>
-              <Typography variant="body2" color="text.secondary">
-                This impressive paella is a perfect party dish and a fun meal to
-                cook together with your guests. Add 1 cup of frozen peas along
-                with the mussels, if you like.
+              <Typography variant="subtitle1">
+                Company: {user.company.name}
+              </Typography>
+              <Typography variant="subtitle1">
+                Eslogan: {user.company.catchPhrase}
               </Typography>
             </CardContent>
             <CardActions disableSpacing>

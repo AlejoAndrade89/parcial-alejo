@@ -6,6 +6,8 @@ import { FormContactContainer } from "./components/pages/Form/FormContact.contai
 import ThemeContextProvider from "./context/ThemeContext/ThemeContext";
 import DataContextProvider from "./context/DataContext/DataContext";
 import { Home } from "./components/pages/Home/Home";
+import DentistSelectedContainer from "./components/pages/DentistSelected/DentistSelectedContainer";
+import FavoritesContainer from "./components/pages/Favorites/FavoritesContainer";
 
 function App() {
   return (
@@ -13,16 +15,16 @@ function App() {
       <DataContextProvider>
         <ThemeContextProvider>
           <Routes>
-            <Route element={<Footer />}>
-              <Route element={<Navbar />}>
-                <Route path="/" element={<Home />} />
+            <Route element={<Navbar />}>
+              <Route path="/" element={<Home />} />
+              <Route element={<Footer />}>
                 <Route path="/dentistas" element={<ProfessionalsContainer />} />
                 <Route
                   path="/dentista/:id"
-                  element={<h1>Aca va el profesional</h1>}
+                  element={<DentistSelectedContainer />}
                 />
                 <Route path="/contacto" element={<FormContactContainer />} />
-                <Route path="/favs" element={<h1>Aca van los favoritos</h1>} />
+                <Route path="/favs" element={<FavoritesContainer />} />
               </Route>
             </Route>
             <Route path="*" element={<h1>Not Found</h1>} />

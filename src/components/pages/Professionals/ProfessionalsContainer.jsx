@@ -18,8 +18,8 @@ const ProfessionalsContainer = () => {
   console.log(state.users);
 
   return (
-    <div>
-      <h2>Aca van los profesionales</h2>
+    <div style={{ fontSize: "1.5rem", textAlign: "center", margin: "50px" }}>
+      <h2>Profesionales Dentales</h2>
       <Professionals
         users={state.users}
         dispatch={dispatch}

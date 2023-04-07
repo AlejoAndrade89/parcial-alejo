@@ -15,7 +15,7 @@ export const FormContact = ({
         alignItems: "center",
         margin: "20px",
         padding: "10px",
-        height: "100vh",
+        height: "50vh",
       }}
     >
       <h2>Want to Know more ?</h2>

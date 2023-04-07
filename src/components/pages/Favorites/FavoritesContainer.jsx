@@ -6,6 +6,7 @@ const FavoritesContainer = () => {
 
   return (
     <div>
+      <h1>Su listado de Favoritos</h1>
       {state.favs.map((e) => (
         <h1 key={e.id}>{e.name}</h1>
       ))}

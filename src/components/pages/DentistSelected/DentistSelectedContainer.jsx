@@ -1,10 +1,11 @@
-import React, { useContext, useEffect } from "react";
-import { DataContext } from "../../../context/DataContext/DataContext";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import DentistSelected from "./DentistSelected";
+import { DataContext } from "../../../context/DataContext/DataContext";
+import { useContext, useEffect } from "react";
 
 const DentistSelectedContainer = () => {
-  const [dispatch] = useContext(DataContext);
+  const { dispatch } = useContext(DataContext);
   const { id } = useParams();
 
   useEffect(() => {

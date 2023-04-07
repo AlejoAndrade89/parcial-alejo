@@ -28,6 +28,7 @@ const Navbar = () => {
           >
             Home
           </NavLink>
+
           <NavLink
             to="/favs"
             className={({ isActive }) =>
@@ -48,7 +49,7 @@ const Navbar = () => {
             <FormControlLabel
               sx={{ color: "white" }}
               control={<Switch defaultChecked />}
-              label="SwitchMode"
+              label=""
               onClick={handleDarkModeClick}
             />
           </FormGroup>
