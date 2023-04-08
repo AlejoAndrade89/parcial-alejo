@@ -8,6 +8,14 @@
   background-color: crimson;
 }
 
+.container-dh{
+  color: whitesmoke;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+
 .container-items {
   display: flex;
   gap: 1rem;

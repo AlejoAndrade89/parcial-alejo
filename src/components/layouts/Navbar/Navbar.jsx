@@ -3,6 +3,7 @@ import { Outlet, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { FormControlLabel, FormGroup, Switch } from "@mui/material";
 import { ThemeContext } from "../../../context/ThemeContext/ThemeContext";
+import logo from "..//..//assets/img/DH.png"
 
 const Navbar = () => {
   const { state, dispatch } = useContext(ThemeContext);
@@ -14,8 +15,8 @@ const Navbar = () => {
   return (
     <div className={state.isDark ? "dark" : "light"}>
       <div className="container-navbar">
-        <div>
-          <img src="/public/DH.ico" alt="" />
+        <div className="container-dh">
+          <img className="logodh" src= {logo} /> 
           <h2>Clinic</h2>
         </div>
 
@@ -27,6 +28,14 @@ const Navbar = () => {
             }
           >
             Home
+            </NavLink>
+          <NavLink
+            to="/dentistas"
+            className={({ isActive }) =>
+              isActive ? "navbar-items-active" : "navbar-items"
+            }
+          >
+            Dentists
           </NavLink>
           <NavLink
             to="/favs"

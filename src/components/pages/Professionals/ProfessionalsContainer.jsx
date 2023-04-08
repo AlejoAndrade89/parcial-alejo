@@ -19,7 +19,7 @@ const ProfessionalsContainer = () => {
 
   return (
     <div style={{ fontSize: "1.5rem", textAlign: "center", margin: "50px" }}>
-      <h2>Profesionales Dentales</h2>
+      <h2>Dental Professionals</h2>
       <br />
       <br />
       <Professionals

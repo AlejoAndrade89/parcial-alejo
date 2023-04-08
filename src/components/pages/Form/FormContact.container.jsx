@@ -33,12 +33,12 @@ export const FormContactContainer = () => {
     e.preventDefault();
     const { nombre, correo } = client;
     if (!validateName(nombre) || !validateEmail(correo)) {
-      Swal.fire("Verifique su informacion nuevamente");
+      Swal.fire("Check your information again");
       return;
     }
     console.log("nombre:", nombre);
     console.log("Correo:", correo);
-    Swal.fire("Gracias " + nombre + " te contactaremos cuanto antes via email");
+    Swal.fire("Thank you!! " + nombre + " we will contact you as soon as possible via email");
   };
 
   return (

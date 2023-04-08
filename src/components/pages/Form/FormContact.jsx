@@ -10,17 +10,17 @@ export const FormContact = ({
     <Box className="form-container" sx={{ width: { sm: "100%", lg: "100%" } }}>
       <h2>Want to Know more ?</h2>
       <TextField
-        label="Nombre"
+        label="Name"
         variant="outlined"
         className="form-field"
-        sx={{ width: { sm: "100%", lg: "50%" } }}
+        sx={{ width: { sm: "100%", lg: "50%" }, backgroundColor: "whitesmoke" }}
         onChange={handleNameChange}
       />
       <TextField
-        label="Correo"
+        label="Email"
         variant="outlined"
         className="form-field"
-        sx={{ width: { sm: "100%", lg: "50%" } }}
+        sx={{ width: { sm: "100%", lg: "50%" }, backgroundColor: "whitesmoke" }}
         onChange={handleEmailChange}
       />
       <Button

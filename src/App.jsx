@@ -16,8 +16,8 @@ function App() {
         <ThemeContextProvider>
           <Routes>
             <Route element={<Navbar />}>
-              <Route path="/" element={<Home />} />
               <Route element={<Footer />}>
+                <Route path="/" element={<Home />} />
                 <Route path="/dentistas" element={<ProfessionalsContainer />} />
                 <Route
                   path="/dentista/:id"
