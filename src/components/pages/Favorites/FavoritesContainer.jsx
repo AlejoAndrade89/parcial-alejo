@@ -17,7 +17,7 @@ const FavoritesContainer = () => {
     <div className="favorite-card">
       <h1>Su listado de Favoritos</h1>
       {state.favs.map((e) => (
-        <Card style={{ width: 345, backgroundColor: "#bdcdd6" }}>
+        <Card key={e.id} style={{ width: 345, backgroundColor: "#bdcdd6" }}>
           <CardHeader
             avatar={
               <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">

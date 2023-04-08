@@ -28,10 +28,14 @@ const Professionals = ({ users, dispatch, favs }) => {
             <CardHeader
               avatar={
                 <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
-                  Pr
+                  {user.name && user.name.charAt(0)}
                 </Avatar>
               }
-              title={user.name}
+              title={
+                <Typography variant="h6" component="div">
+                  {user.name}
+                </Typography>
+              }
             />
 
             <CardMedia
@@ -40,14 +44,14 @@ const Professionals = ({ users, dispatch, favs }) => {
               image={
                 "https://res.cloudinary.com/dnqfh2chg/image/upload/v1680834957/doctor_mpg4ix.jpg"
               }
-              alt="Paella dish"
+              alt="DentistCard"
             />
             <CardContent>
               <Typography variant="subtitle1">
                 Company: {user.company.name}
               </Typography>
               <Typography variant="subtitle1">
-                Eslogan: {user.username}
+                City: {user.address.city}
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
