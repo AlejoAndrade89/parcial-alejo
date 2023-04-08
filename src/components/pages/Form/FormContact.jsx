@@ -1,6 +1,5 @@
-import React from "react";
-import "./FormContact.css";
 import { Box, Button, TextField } from "@mui/material";
+import "./FormContact.css";
 
 export const FormContact = ({
   handleSubmit,
@@ -8,35 +7,28 @@ export const FormContact = ({
   handleNameChange,
 }) => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        margin: "20px",
-        padding: "10px",
-        height: "50vh",
-      }}
-    >
+    <Box className="form-container" sx={{ width: { sm: "100%", lg: "100%" } }}>
       <h2>Want to Know more ?</h2>
-      <br />
-      <br />
       <TextField
         label="Nombre"
         variant="outlined"
-        margin="normal"
+        className="form-field"
+        sx={{ width: { sm: "100%", lg: "50%" } }}
         onChange={handleNameChange}
       />
       <TextField
         label="Correo"
         variant="outlined"
-        margin="normal"
+        className="form-field"
+        sx={{ width: { sm: "100%", lg: "50%" } }}
         onChange={handleEmailChange}
       />
       <Button
         variant="contained"
         color="primary"
         type="submit"
+        className="form-button"
+        sx={{ width: { sm: "100%", lg: "auto" }, mt: { sm: "20px" } }}
         onClick={handleSubmit}
       >
         Enviar

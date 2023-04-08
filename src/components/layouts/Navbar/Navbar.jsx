@@ -28,7 +28,6 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-
           <NavLink
             to="/favs"
             className={({ isActive }) =>

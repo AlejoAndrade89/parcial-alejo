@@ -10,17 +10,19 @@ import {
   Typography,
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import "./Professionals.css";
 
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Professionals.css";
 
 const Professionals = ({ users, dispatch, favs }) => {
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
+    <div className="card-container">
       {users.map((user) => {
         return (
           <Card
-            sx={{ maxWidth: 345, backgroundColor: "#BDCDD6" }}
+            style={{ width: 345, backgroundColor: "#bdcdd6" }}
             key={user.id}
           >
             <CardHeader
@@ -31,6 +33,7 @@ const Professionals = ({ users, dispatch, favs }) => {
               }
               title={user.name}
             />
+
             <CardMedia
               component="img"
               height="194"
@@ -44,7 +47,7 @@ const Professionals = ({ users, dispatch, favs }) => {
                 Company: {user.company.name}
               </Typography>
               <Typography variant="subtitle1">
-                Eslogan: {user.company.catchPhrase}
+                Eslogan: {user.username}
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
@@ -62,7 +65,10 @@ const Professionals = ({ users, dispatch, favs }) => {
                   }
                 />
               </IconButton>
-              <Link to={`/dentista/${user.id}`}>
+              <Link
+                style={{ textDecoration: "none" }}
+                to={`/dentista/${user.id}`}
+              >
                 <Button variant="contained">Ver detalle</Button>
               </Link>
             </CardActions>

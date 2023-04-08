@@ -20,6 +20,8 @@ const ProfessionalsContainer = () => {
   return (
     <div style={{ fontSize: "1.5rem", textAlign: "center", margin: "50px" }}>
       <h2>Profesionales Dentales</h2>
+      <br />
+      <br />
       <Professionals
         users={state.users}
         dispatch={dispatch}

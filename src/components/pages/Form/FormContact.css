@@ -1,8 +1,36 @@
-.form-design {
+.form-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vh;
+  margin: 20px;
+  padding: 10px;
+  height: 50vh;
+  gap: 20px;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-button {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .form-container {
+    height: auto;
+  }
+
+  .form-field {
+    width: 80%;
+  }
+
+  .form-button {
+    width: 80%;
+  }
 }
